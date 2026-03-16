@@ -65,8 +65,9 @@ session_start();
         }
         ?>
     </section>
-
+    <section>
     <a href="gestion.php">Ir a gestión</a>
-    <a href="crearentrenadora.php">Ir a creación de entrenadoras</a>
+    <a href="crearentrenadora.php">Ir a entrenadoras</a>
+    </section>
 </body>
 </html>
