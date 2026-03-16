@@ -117,6 +117,7 @@ if (isset($_POST["vaciar"])) {
 </section>
 <section>
     <a href="gestionarPokemon.php">Gestionar equipo pokemon</a>
+    <a href="combate.php">Combate Pokemon</a>
 </section>
 </body>
 </html>

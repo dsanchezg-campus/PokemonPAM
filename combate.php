@@ -35,9 +35,9 @@ if (isset($_POST["combatir"]) && isset($_POST["entrenadora1"]) && isset($_POST["
         $mensaje .= "<p><strong>" . $entrenadora1->getNombre() . "</strong> lanza a " . $pokemon1->getNombre() . ".</p>";
         $mensaje .= "<p><strong>" . $entrenadora2->getNombre() . "</strong> responde con " . $pokemon2->getNombre() . ".</p>";
 
-        // Usamos el método Atacar() que definiste en Pokemon.php
-        $mensaje .= "<p>▶ " . $pokemon1->Atacar() . "</p>";
-        $mensaje .= "<p>▶ " . $pokemon2->Atacar() . "</p>";
+        // Usamos el método Atacar() de en Pokemon.php
+        $mensaje .= "<p>▶ " . $pokemon1->Atacar($pokemon2) . "</p>";
+        $mensaje .= "<p>▶ " . $pokemon2->Atacar($pokemon2) . "</p>";
 
         $mensaje .= "<p><em>¡Ambos Pokémon han demostrado ser muy fuertes, es un empate técnico!</em></p>";
     }
@@ -115,9 +115,9 @@ if (isset($_POST["combatir"]) && isset($_POST["entrenadora1"]) && isset($_POST["
 </section>
 
 <section>
-    <a href="gestion.php">Volver a Gestión</a><br>
-    <a href="crearpokemon.php">Crear más Pokémon</a><br>
-    <a href="crearentrenadora.php">Crear más Entrenadoras</a>
+    <p><a href="gestion.php">Volver a Gestión</a></p>
+    <p><a href="crearpokemon.php">Crear más Pokémon</a></p>
+    <p><a href="crearentrenadora.php">Crear más Entrenadoras</a></p>
 </section>
 </body>
 </html>

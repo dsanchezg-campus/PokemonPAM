@@ -25,7 +25,7 @@ class Pokemon {
 }
 
     public function Atacar(int $idAtq, Pokemon $pokemon) {
-        if(rand(1, 100) <= $this->movimientos[$idAtq]['precision']){
+        if(rand(1, 100) <= $this->movimientos[$idAtq]['precision']) {
             $pokemon->vida['actual'] -= $this->movimientos[$idAtq]['danio'];
             return "$this->nombre uso ". $this->movimientos[$idAtq]['nombre']. "haciendo $this->movimientos[$idAtq]['danio'] de daño";
         } else {
