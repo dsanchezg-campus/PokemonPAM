@@ -7,13 +7,12 @@ class Pokemon {
     private int $nivel;
     private array $vida;
 
-    public function __construct($nombre, $elemento, $tipo, $movimiento, $danio, $precision, $usos) {
+    public function __construct($nombre, $elemento, $tipo, $movimiento, $dano, $precision, $usos) {
         $this->nombre = $nombre;
         $this->elemento = $elemento;
         $this->tipo = $tipo;
         $this->movimientos[]['nombre'] = $movimiento;
-        $this->movimientos[]['tipo'] = $tipo;
-        $this->movimientos[]['danio'] = $danio;
+        $this->movimientos[]['dano'] = $dano;
         $this->movimientos[]['precision'] = $precision;
         $this->movimientos[]['usos'] = $usos;
         $this->nivel = 1;
@@ -25,8 +24,13 @@ class Pokemon {
     return $this->nombre;
 }
 
-    public function Atacar(){
-        return $this->nombre . " ataca con " . $this->ataque . " y causa daño.";
+    public function Atacar(int $idAtq, Pokemon $pokemon) {
+        if(rand(1, 100) <= $this->movimientos[$idAtq]['precision']){
+            $pokemon->vida['actual'] -= $this->movimientos[$idAtq]['danio'];
+            return "$this->nombre uso ". $this->movimientos[$idAtq]['nombre']. "haciendo $this->movimientos[$idAtq]['danio'] de daño";
+        } else {
+            return "$this->nombre uso $this->ataque['nombre'] pero falló";
+        }
     }
     
 
@@ -47,6 +51,12 @@ class Pokemon {
     }
     public function MostrarMovimientos() : array{
         return $this->movimientos;
+    }
+    public function AprenderMovimientos($nombre, $dano, $precision, $usos) {
+            $this->movimientos[]['nombre'] = $nombre;
+            $this->movimientos[]['dano'] = $dano;
+            $this->movimientos[]['precision'] = $precision;
+            $this->movimientos[]['usos'] = $usos;
     }
 }
 ?>
