@@ -15,6 +15,7 @@ session_start();
     <section>
         <a href="gestion.php">Ir a gestión</a>
         <a href="crearentrenadora.php">Ir a entrenadoras</a>
+        <a href="combate.php">Combate Pokemon</a>
     </section>
     <section>
         <h1>Crear Pokemon</h1>
