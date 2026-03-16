@@ -59,7 +59,7 @@ if (isset($_POST['mostrarPokemon'])) {
 </section>
 
 <section>
-    <h2>Añadir Pokomon a un equipo</h2>
+    <h2>Añadir Pokemon a un equipo</h2>
     <form method="POST" action="">
         <label for="entrenadora_agregar">Entrenadora</label>
         <select id="entrenadora_agregar" name="entrenadora_agregar" required>
