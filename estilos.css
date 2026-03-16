@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    padding-top: 10px;
     background: #f75e5e url("container_bg.png");
     font-family: Arial, sans-serif;
     display: flex;

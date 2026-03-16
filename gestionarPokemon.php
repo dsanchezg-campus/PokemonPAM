@@ -69,7 +69,7 @@ if (isset($_POST['mostrarPokemon'])) {
             <?php endforeach; ?>
         </select>
 
-        <label for="pokemon_agregar">Pok�mon</label>
+        <label for="pokemon_agregar">Pokemon</label>
         <select id="pokemon_agregar" name="pokemon_agregar" required>
             <option value="">Selecciona un pokemon</option>
             <?php foreach ($_SESSION['pokemons'] as $id => $pokemon): ?>
@@ -82,21 +82,21 @@ if (isset($_POST['mostrarPokemon'])) {
 </section>
 
 <section>
-    <h2>Ver informaci�n de un Pok�mon</h2>
+    <h2>Ver informacion de un Pokemon</h2>
     <form method="POST" action="">
-        <label for="pokemon_info_id">Pok�mon</label>
+        <label for="pokemon_info_id">Pokemon</label>
         <select id="pokemon_info_id" name="pokemon_info_id" required>
-            <option value="">Selecciona un pok�mon</option>
+            <option value="">Selecciona un pokemon</option>
             <?php foreach ($_SESSION['pokemons'] as $id => $pokemon): ?>
                 <option value="<?php echo $id; ?>"><?php echo htmlspecialchars($pokemon->getNombre()); ?></option>
             <?php endforeach; ?>
         </select>
-        <button type="submit" name="mostrarPokemon">Mostrar informaci�n</button>
+        <button type="submit" name="mostrarPokemon">Mostrar informacion</button>
     </form>
 </section>
 
 <section>
-    <h2>Entrenadoras creadas</h2>
+    <h2>Equipos de entrenadoras</h2>
     <?php if (count($_SESSION['entrenadoras']) > 0): ?>
         <?php foreach ($_SESSION['entrenadoras'] as $entrenadora): ?>
             <article class="card">
@@ -123,7 +123,7 @@ if (isset($_POST['mostrarPokemon'])) {
 </section>
 
 <section>
-    <a href="gestion.php">Volver a gesti�n</a>
+    <a href="gestion.php">Volver a gestion</a>
 </section>
 </body>
 </html>
