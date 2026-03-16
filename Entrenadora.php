@@ -13,8 +13,8 @@ class Entrenadora{
         $this->pokemons[] = $pokemon;
     }
 
-    public function getNombre() { 
-        return $this->nombre; 
+    public function getNombre() {
+        return $this->nombre;
     }
 
     public function MostrarEquipo(){
@@ -54,6 +54,10 @@ class Entrenadora{
     public function capturarPokemon($pokemon){
         $this->CazarPokemon($pokemon);
         return $this->anadirPokemonAlEquipo($pokemon);
+    }
+    public function EnsenarMovimiento(Pokemon $pokemon, $movimiento, $dano, $precision, $usos) : string{
+        $pokemon->AprenderMovimientos($movimiento, $dano, $precision, $usos);
+        return $pokemon->getNombre(). " ha aprendido ". $movimiento;
     }
 
 }
