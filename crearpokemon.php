@@ -36,7 +36,6 @@ session_start();
             <p></p>
             <input type="submit" value="crear">
         </form>
-
     </section>
 
     <?php
